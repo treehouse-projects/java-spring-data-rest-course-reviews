@@ -1,19 +1,18 @@
 package com.teamtreehouse.review;
 
+import com.teamtreehouse.core.BaseEntity;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Review {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private final Long id;
+public class Review extends BaseEntity {
 
     // TODO:csd - We are duplicating code here for every single entity. Share it?
     protected Review() {
-        id = null;
+        super();
     }
 
     private int rating;
